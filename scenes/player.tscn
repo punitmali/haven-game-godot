@@ -33,5 +33,5 @@ radius = 44.777225
 sprite_frames = SubResource("SpriteFrames_46l1j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133947214]
-position = Vector2(-42, -50)
+position = Vector2(-44, 14)
 shape = SubResource("CircleShape2D_46l1j")
