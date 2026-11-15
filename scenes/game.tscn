@@ -7,6 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://d35vagd70dvjn" path="res://scenes/medikit.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://gra5mdvy2j77" path="res://scenes/monster.tscn" id="6_p57ef"]
 
+[sub_resource type="Gradient" id="Gradient_p57ef"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p768a"]
+gradient = SubResource("Gradient_p57ef")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p57ef"]
+line_spacing = 1.0
+font_size = 50
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("3_lnu2h")
 1:5/0 = 0
@@ -19340,7 +19354,7 @@ size = Vector2(119, 161)
 [node name="game" type="Node2D" unique_id=1457006638]
 
 [node name="Player" parent="." unique_id=1218412079 instance=ExtResource("1_yqjtg")]
-position = Vector2(17745, 276)
+position = Vector2(46, 16)
 script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1961053554]
@@ -19350,10 +19364,22 @@ rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
+[node name="Torch" type="PointLight2D" parent="Player" unique_id=1753588942]
+position = Vector2(-43, -9)
+color = Color(0.95686275, 0.69411767, 0.03137255, 1)
+energy = 1.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_p768a")
+offset = Vector2(0.5, 0.5)
+texture_scale = 2.0
+
 [node name="Label" type="Label" parent="Player" unique_id=1052132967]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Health: "
+offset_left = -191.0
+offset_top = -230.0
+offset_right = -3.0
+offset_bottom = -161.0
+text = "Hp:"
+label_settings = SubResource("LabelSettings_p57ef")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2145084103]
 tile_set = SubResource("TileSet_p768a")
@@ -19442,7 +19468,7 @@ position = Vector2(7845, -113)
 position = Vector2(3882, 248)
 
 [node name="monster11" parent="." unique_id=1278545887 instance=ExtResource("6_p57ef")]
-position = Vector2(1482, 241)
+position = Vector2(677, 257)
 
 [node name="monster12" parent="." unique_id=32617358 instance=ExtResource("6_p57ef")]
 position = Vector2(11413, 254)
@@ -19457,5 +19483,21 @@ position = Vector2(17922, 289)
 position = Vector2(5, -20)
 shape = SubResource("RectangleShape2D_46l1j")
 
+[node name="darkness" type="CanvasModulate" parent="." unique_id=676018384]
+color = Color(0.03137255, 0.050980393, 0.09411765, 1)
+
 [connection signal="body_entered" from="Medikit" to="Player" method="_on_medikit_body_entered"]
+[connection signal="body_shape_entered" from="monster" to="Player" method="_on_monster_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster2" to="Player" method="_on_monster_2_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster3" to="Player" method="_on_monster_3_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster4" to="Player" method="_on_monster_4_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster5" to="Player" method="_on_monster_5_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster6" to="Player" method="_on_monster_6_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster7" to="Player" method="_on_monster_7_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster8" to="Player" method="_on_monster_8_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster9" to="Player" method="_on_monster_9_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster10" to="Player" method="_on_monster_10_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster11" to="Player" method="_on_monster_11_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster12" to="Player" method="_on_monster_12_body_shape_entered"]
+[connection signal="body_shape_entered" from="monster13" to="Player" method="_on_monster_13_body_shape_entered"]
 [connection signal="body_shape_entered" from="Area2D" to="Player" method="_on_area_2d_body_shape_entered"]

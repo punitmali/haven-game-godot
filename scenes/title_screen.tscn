@@ -1,25 +1,64 @@
 [gd_scene format=3 uid="uid://pqrhpx5xrshk"]
 
 [ext_resource type="Script" uid="uid://c5uncto24y4a1" path="res://scripts/button.gd" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://cgtu6igdnts3x" path="res://scenes/title_screen.gd" id="1_sa3yf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1a2ex"]
 
 [node name="TitleScreen" type="Node2D" unique_id=2027916202]
+script = ExtResource("1_sa3yf")
 
 [node name="Title" type="Label" parent="." unique_id=1867041683]
-offset_left = 457.0
-offset_top = 199.0
-offset_right = 625.0
-offset_bottom = 222.0
-text = "Sonar: The Last Sense"
+offset_left = 532.0
+offset_top = 185.0
+offset_right = 633.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 50
+text = "Lone Hopper"
 label_settings = SubResource("LabelSettings_1a2ex")
 
 [node name="Button" type="Button" parent="." unique_id=1489140600]
-offset_left = 508.0
-offset_top = 247.0
-offset_right = 596.0
-offset_bottom = 278.0
+offset_left = 540.0
+offset_top = 302.0
+offset_right = 628.0
+offset_bottom = 333.0
 text = "Play Again"
 script = ExtResource("1_fgkus")
+
+[node name="Title2" type="Label" parent="." unique_id=1517469032]
+offset_left = 571.0
+offset_top = 216.0
+offset_right = 599.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 50
+text = "By"
+label_settings = SubResource("LabelSettings_1a2ex")
+
+[node name="Title3" type="Label" parent="." unique_id=1324721352]
+offset_left = 500.0
+offset_top = 243.0
+offset_right = 542.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 50
+text = "Shish,"
+label_settings = SubResource("LabelSettings_1a2ex")
+
+[node name="Title4" type="Label" parent="." unique_id=753970505]
+offset_left = 547.0
+offset_top = 243.0
+offset_right = 627.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 50
+text = "Karan and"
+label_settings = SubResource("LabelSettings_1a2ex")
+
+[node name="Title5" type="Label" parent="." unique_id=1279413825]
+offset_left = 630.0
+offset_top = 242.0
+offset_right = 672.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 50
+text = "Punit"
+label_settings = SubResource("LabelSettings_1a2ex")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

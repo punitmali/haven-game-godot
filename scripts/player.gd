@@ -53,17 +53,74 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+
 	move_and_slide()
 
 
-func _on_monster_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-
+func take_damage():
 	health = max(health - 20, 0)
 	update_health()
-
 	print("Current Health: ", health)
 
-
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+func _on_monster_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body == self:
-		game_over()
+		take_damage()
+
+
+func _on_monster_2_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_3_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_4_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_5_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+		
+func _on_monster_6_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_7_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_8_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_9_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_10_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_11_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_12_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
+
+
+func _on_monster_13_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body == self:
+		take_damage()
