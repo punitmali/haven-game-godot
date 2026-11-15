@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://pqrhpx5xrshk"]
+
+[ext_resource type="Script" uid="uid://c5uncto24y4a1" path="res://scripts/button.gd" id="1_fgkus"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1a2ex"]
+
+[node name="TitleScreen" type="Node2D" unique_id=2027916202]
+
+[node name="Title" type="Label" parent="." unique_id=1867041683]
+offset_left = 457.0
+offset_top = 199.0
+offset_right = 625.0
+offset_bottom = 222.0
+text = "Sonar: The Last Sense"
+label_settings = SubResource("LabelSettings_1a2ex")
+
+[node name="Button" type="Button" parent="." unique_id=1489140600]
+offset_left = 508.0
+offset_top = 247.0
+offset_right = 596.0
+offset_bottom = 278.0
+text = "Play Again"
+script = ExtResource("1_fgkus")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

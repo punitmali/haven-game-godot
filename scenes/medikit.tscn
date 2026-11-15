@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d35vagd70dvjn"]
+
+[ext_resource type="Texture2D" uid="uid://crpwerf0xxjx4" path="res://image-removebg-preview.png" id="1_cqofj"]
+[ext_resource type="Script" uid="uid://bcwx6wxrc3082" path="res://scripts/medikit.gd" id="1_nsad2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p768a"]
+size = Vector2(91.5, 68.5)
+
+[node name="Medikit" type="Area2D" unique_id=658644538]
+script = ExtResource("1_nsad2")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=326955227]
+position = Vector2(22.000063, -16)
+scale = Vector2(0.5833335, 0.29829544)
+texture = ExtResource("1_cqofj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=653491352]
+position = Vector2(19.25, -17.25)
+shape = SubResource("RectangleShape2D_p768a")
