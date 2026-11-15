@@ -7,6 +7,7 @@ const JUMP_SFX := "res://assets/sound/jump.mp3"
 const DEATH_SFX := "res://assets/sound/death.mp3"
 const MEDI_SFX := "res://assets/sound/healthkit.mp3"
 const BG_MUSIC := "res://assets/sound/bgmusic.mp3"
+const EndScreen := preload("res://scripts/end_screen.gd")
 
 var health = 100
 var is_game_over = false
@@ -67,7 +68,18 @@ func game_over():
 	_play(death)
 	if death and _sfx:
 		await _sfx.finished
-	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+	EndScreen.won = false
+	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
+
+
+func win_game() -> void:
+	if is_game_over:
+		return
+	is_game_over = true
+	if _music:
+		_music.stop()
+	EndScreen.won = true
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/end_screen.tscn")
 
 
 func _physics_process(delta: float) -> void:
