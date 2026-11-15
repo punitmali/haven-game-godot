@@ -13,6 +13,9 @@ var health = 100
 var is_game_over = false
 
 @onready var health_label = $Label
+func heal(amount: int):
+	health = min(health + amount, 100)
+	update_health()
 
 var _sfx: AudioStreamPlayer
 var _music: AudioStreamPlayer
@@ -48,7 +51,7 @@ func update_health():
 	health_label.text = "Health: " + str(health)
 
 
-func heal(amount: int):
+func medi(amount: int):
 	health = min(health + amount, 100)
 	update_health()
 	_play(_load_mp3(MEDI_SFX))
