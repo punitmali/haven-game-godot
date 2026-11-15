@@ -19354,7 +19354,7 @@ size = Vector2(119, 161)
 [node name="game" type="Node2D" unique_id=1457006638]
 
 [node name="Player" parent="." unique_id=1218412079 instance=ExtResource("1_yqjtg")]
-position = Vector2(46, 16)
+position = Vector2(6, -362)
 script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1961053554]
@@ -19366,7 +19366,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Torch" type="PointLight2D" parent="Player" unique_id=1753588942]
-position = Vector2(-43, -9)
+position = Vector2(146, 278)
 color = Color(0.95686275, 0.69411767, 0.03137255, 1)
 energy = 1.5
 shadow_enabled = true
@@ -19481,7 +19481,7 @@ position = Vector2(17325, 255)
 position = Vector2(17922, 289)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=401719520]
-position = Vector2(5, -20)
+position = Vector2(-114, -24)
 shape = SubResource("RectangleShape2D_46l1j")
 
 [node name="darkness" type="CanvasModulate" parent="." unique_id=676018384]

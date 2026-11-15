@@ -2,63 +2,51 @@
 
 [ext_resource type="Script" uid="uid://c5uncto24y4a1" path="res://scripts/button.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://cgtu6igdnts3x" path="res://scenes/title_screen.gd" id="1_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://cylfujxdoqtsj" path="res://scenes/01_title_LONE.png" id="3_mgrm8"]
+[ext_resource type="Texture2D" uid="uid://ddfrtvh3q8pcp" path="res://scenes/02_title_BOUNCER.png" id="4_dc4i4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1a2ex"]
 
 [node name="TitleScreen" type="Node2D" unique_id=2027916202]
 script = ExtResource("1_sa3yf")
 
-[node name="Title" type="Label" parent="." unique_id=1867041683]
-offset_left = 532.0
-offset_top = 185.0
-offset_right = 633.0
-offset_bottom = 213.0
-theme_override_font_sizes/font_size = 50
-text = "Lone Hopper"
-label_settings = SubResource("LabelSettings_1a2ex")
-
 [node name="Button" type="Button" parent="." unique_id=1489140600]
-offset_left = 540.0
-offset_top = 302.0
-offset_right = 628.0
-offset_bottom = 333.0
+offset_left = 532.0
+offset_top = 390.0
+offset_right = 620.0
+offset_bottom = 421.0
 text = "Play Again"
 script = ExtResource("1_fgkus")
 
-[node name="Title2" type="Label" parent="." unique_id=1517469032]
-offset_left = 571.0
-offset_top = 216.0
-offset_right = 599.0
-offset_bottom = 244.0
+[node name="Title6" type="Label" parent="." unique_id=2038512142]
+offset_left = 434.0
+offset_top = 264.0
+offset_right = 732.0
+offset_bottom = 292.0
 theme_override_font_sizes/font_size = 50
-text = "By"
+text = "Thanks for playing our first ever game!"
 label_settings = SubResource("LabelSettings_1a2ex")
 
-[node name="Title3" type="Label" parent="." unique_id=1324721352]
-offset_left = 500.0
-offset_top = 243.0
-offset_right = 542.0
-offset_bottom = 271.0
+[node name="Title6" type="Label" parent="Title6" unique_id=2077076234]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 34.0
+offset_right = 280.0
+offset_bottom = 62.0
 theme_override_font_sizes/font_size = 50
-text = "Shish,"
+text = "Made by Shish, Karan and Punit"
 label_settings = SubResource("LabelSettings_1a2ex")
 
-[node name="Title4" type="Label" parent="." unique_id=753970505]
-offset_left = 547.0
-offset_top = 243.0
-offset_right = 627.0
-offset_bottom = 271.0
-theme_override_font_sizes/font_size = 50
-text = "Karan and"
-label_settings = SubResource("LabelSettings_1a2ex")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=620362860]
 
-[node name="Title5" type="Label" parent="." unique_id=1279413825]
-offset_left = 630.0
-offset_top = 242.0
-offset_right = 672.0
-offset_bottom = 270.0
-theme_override_font_sizes/font_size = 50
-text = "Punit"
-label_settings = SubResource("LabelSettings_1a2ex")
+[node name="01TitleLone" type="Sprite2D" parent="." unique_id=76356320]
+position = Vector2(574.00006, 126)
+scale = Vector2(0.53743553, 0.46333328)
+texture = ExtResource("3_mgrm8")
+
+[node name="02TitleBouncer" type="Sprite2D" parent="." unique_id=1896652743]
+position = Vector2(567, 202.00002)
+scale = Vector2(0.654878, 0.50555557)
+texture = ExtResource("4_dc4i4")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
