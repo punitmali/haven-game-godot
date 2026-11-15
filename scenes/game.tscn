@@ -19354,7 +19354,7 @@ size = Vector2(119, 161)
 [node name="game" type="Node2D" unique_id=1457006638]
 
 [node name="Player" parent="." unique_id=1218412079 instance=ExtResource("1_yqjtg")]
-position = Vector2(6, -362)
+position = Vector2(68, -343)
 script = ExtResource("2_lnu2h")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1961053554]
@@ -19366,7 +19366,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Torch" type="PointLight2D" parent="Player" unique_id=1753588942]
-position = Vector2(146, 278)
+position = Vector2(10, 263)
 color = Color(0.95686275, 0.69411767, 0.03137255, 1)
 energy = 1.5
 shadow_enabled = true

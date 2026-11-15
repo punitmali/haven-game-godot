@@ -181,4 +181,4 @@ func _on_monster_13_body_shape_entered(body_rid: RID, body: Node2D, body_shape_i
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if body == self:
-		game_over()
+		win_game()
